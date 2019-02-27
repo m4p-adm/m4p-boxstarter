@@ -1,0 +1,51 @@
+# Boxstarter options
+$Boxstarter.RebootOk=$true # Allow reboots?
+$Boxstarter.NoPassword=$false # Is this a machine with no login password?
+$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
+
+# Basic setup
+Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder -EnableShowRibbon
+
+Disable-UAC
+Disable-BingSearch
+Disable-GameBarTips
+Enable-RemoteDesktop
+
+# Update Windows and reboot if necessary
+Install-WindowsUpdate -AcceptEula -Full
+if (Test-PendingReboot) { Invoke-Reboot }
+
+cinst adobereader
+cinst bitwarden
+cinst cmder
+cinst fileoptimizer
+cinst firefox
+cinst ublockorigin-firefox
+cinst xmind
+cinst hourglass.install
+cinst irfanview
+cinst irfanviewplugins
+cinst listary
+cinst notepadplusplus
+cinst microsoft-office-deployment --params="'/64bit /Product:WordRetail'"
+cinst microsoft-office-deployment --params="'/64bit /Product:ExcelRetail'"
+cinst microsoft-office-deployment --params="'/64bit /Product:PowerpointRetail'"
+cinst microsoft-office-deployment --params="'/64bit /Product:OutlookRetail'"
+cinst opensans
+cinst paint.net
+cinst pdfsam.install
+const pdftk
+cinst peazip
+cinst procexp
+cinst kitty
+cinst rdcman
+cinst seafile-client
+cinst sharex
+cinst skype
+cinst sysinternals
+cinst treesizefree
+cinst vlc
+cinst winscp
+
+Install-WindowsUpdate -AcceptEula -Full
+$Boxstarter.RebootOk=$false # Allow reboots?
