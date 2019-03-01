@@ -33,6 +33,7 @@ cinst opensans
 cinst paint.net
 const pdftk
 cinst peazip
+cinst python3
 #cinst procexp
 cinst qgis
 #cinst kitty
