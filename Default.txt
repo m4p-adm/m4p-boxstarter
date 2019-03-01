@@ -26,26 +26,24 @@ cinst hourglass.install
 cinst irfanview
 cinst irfanviewplugins
 cinst listary
+cinst imagej
 cinst notepadplusplus
-cinst microsoft-office-deployment --params="'/64bit /Product:WordRetail /Exclude:Publisher,OneDrive,OneNote,Lync,Groove,Access'"
-cinst microsoft-office-deployment --params="'/64bit /Product:ExcelRetail /Exclude:Publisher,OneDrive,OneNote,Lync,Groove,Access'"
-cinst microsoft-office-deployment --params="'/64bit /Product:PowerpointRetail /Exclude:Publisher,OneDrive,OneNote,Lync,Groove,Access'"
-cinst microsoft-office-deployment --params="'/64bit /Product:OutlookRetail /Exclude:Publisher,OneDrive,OneNote,Lync,Groove,Access'"
+cinst microsoft-office-deployment --params="'/64bit /Product:ProPlusRetail /Exclude:Publisher,OneDrive,Lync,Groove,Access'"
 cinst opensans
 cinst paint.net
-cinst pdfsam.install
 const pdftk
 cinst peazip
-cinst procexp
-cinst kitty
+#cinst procexp
+cinst qgis
+#cinst kitty
 cinst rdcman
-cinst seafile-client
+cinst seafile-client 
 cinst sharex
 cinst skype
-cinst sysinternals
+#cinst sysinternals
 cinst treesizefree
 cinst vlc
-cinst winscp
+#cinst winscp
 
 Install-WindowsUpdate -AcceptEula -Full
 $Boxstarter.RebootOk=$false # Allow reboots?
